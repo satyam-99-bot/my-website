@@ -5,125 +5,159 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Satyam Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Pacifico&family=Montserrat:wght@700&display=swap"
-        rel="stylesheet">
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
     <style>
-        *{
+        /* RESET */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Poppins', sans-serif;
     background: url("background.jpg") no-repeat center center/cover;
-    height: 100vh;
+    min-height: 100vh;
     color: white;
-    background-color: #000;
+    overflow-x: hidden;
 }
 
 /* NAVBAR */
-.navbar{
+.navbar {
     width: 100%;
-    padding: 25px 50px;
+    padding: 20px 60px;
     position: fixed;
     top: 0;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(8px);
+    z-index: 999;
+    animation: fadeIn 1s ease;
 }
 
-.navbar ul{
+.navbar ul {
     display: flex;
     gap: 40px;
-    list-style: none;
 }
 
-.navbar ul li a{
+.navbar ul li a {
     color: white;
     font-size: 18px;
     text-decoration: none;
     transition: 0.3s;
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-    padding-bottom: 3px;
 }
 
-.navbar ul li a:hover{
+.navbar ul li a:hover {
     color: #1557e4;
     border-bottom: 2px solid #1557e4;
 }
 
-/* HERO SECTION */
-.hero{
-    height: 100vh;
-    justify-content: center;
-    align-items: left;
-    padding-right: 300px;
-    padding-top: 40px;
-    margin-left: 50px;
-    margin-bottom: 80px;
-}
-
-.text-box{
-    text-align: right;
-}
-
-.text-box h1{
-    font-size: 65px;
-    line-height: 70px;
-}
-
-.name{
-    font-family: 'jason', sans-serif;
-    display: block;
-    font-size: 65px;
-    margin-right: 680px;
-    margin-top: 180px;
-    font-weight: 100;
-}
-
-.surname{
-    font-family: 'Verdana' sans-serif;
-    font-size: 90px;
-    display: block;
-    margin-right: 600px;
-}
-
-.tagline{
-    font-family: 'Georgia','Times New Roman';
-    font-size: 24px;
-    opacity: 0.85px;
-    margin-right: 675px;
-    font-style: oblique;
-}
-
-/* Icon container */
-.icon {
-    position: fixed;        /* Always stay fixed on screen */
-    bottom: 20px;              /* Distance from bottom */
-    left: 20px;             /* Left corner placement */
+/* HERO */
+.hero {
+    min-height: 100vh;
     display: flex;
-    gap: 15px;              /* Space between icons */
-    z-index: 1000;          /* On top of everything */
+    align-items: center;
+    padding: 0 80px;
+    padding-top: 120px;
 }
 
-/* Anchor styling */
+.text-box {
+    text-align: left;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 85px;
+    letter-spacing: 4px;
+    display: inline-block;
+    animation: slideFromTop 1.2s ease-out;
+}
+
+.surname {
+    font-family: 'Oswald', sans-serif;
+    font-size: 100px;
+    margin-top: -10px;
+    display: inline-block;
+    animation: slideFromBottom 1.2s ease-out;
+}
+
+.tagline {
+    font-size: 26px;
+    opacity: 0.85;
+    margin-top: 8px;
+    animation: fadeIn 2s ease;
+}
+
+/* SOCIAL ICONS */
+.icon {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    gap: 15px;
+    z-index: 1000;
+}
+
 .icon a {
     text-decoration: none;
-    font-size: 28px;        /* Icon size */
-    color: #1557e4;         /* Main theme color */
-    transition: 0.3s ease;  /* For hover animation */
+    font-size: 32px;
+    color: #1557e4;
+    transition: 0.3s ease;
 }
 
-/* Hover effect */
 .icon a:hover {
-    color: #0e3ca1;         /* Slightly darker blue on hover */
-    transform: scale(1.5);  /* Zoom effect */
+    color: #0e3ca1;
+    transform: rotate(15deg) scale(1.3);
+}
+
+/* -------------------------- */
+/*        ANIMATIONS          */
+/* -------------------------- */
+
+@keyframes slideFromTop {
+    0% { transform: translateY(-80px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideFromBottom {
+    0% { transform: translateY(80px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* -------------------------- */
+/*      RESPONSIVE DESIGN     */
+/* -------------------------- */
+
+@media (max-width: 992px) {
+    .name { font-size: 65px; }
+    .surname { font-size: 80px; }
+    .tagline { font-size: 20px; }
+}
+
+@media (max-width: 768px) {
+    .hero { padding: 0 30px; padding-top: 120px; }
+    .name { font-size: 55px; }
+    .surname { font-size: 70px; }
+    .tagline { font-size: 18px; }
+}
+
+@media (max-width: 480px) {
+    .hero { padding: 0 20px; }
+    .name { font-size: 45px; }
+    .surname { font-size: 55px; }
+    .tagline { font-size: 16px; }
 }
 
     </style>
@@ -131,14 +165,16 @@ body{
 
 <body>
 
+    <!-- NAVBAR -->
     <nav class="navbar">
         <ul>
-            <li><a href="home.html" target="_blank">home</a></li>
-            <li><a href="resume.html" target="_blank" >Resume</a></li>
-            <li><a href="about.html">about</a></li>
+            <li><a href="home.html" target="_blank">Home</a></li>
+            <li><a href="resume.html" target="_blank">Resume</a></li>
+            <li><a href="about.html">About</a></li>
         </ul>
     </nav>
 
+    <!-- HERO SECTION -->
     <section class="hero">
         <div class="text-box">
             <h1>
@@ -148,22 +184,16 @@ body{
             <h2 class="tagline">Web Developer</h2>
         </div>
     </section>
-    
+
+    <!-- SOCIAL ICONS -->
     <div class="icon">
-        <br>
-        <a href="https://www.instagram.com/igsatyamofficial_?igsh=MTBnaXlobW5senUyZA==/" target="_blank">
-                <i class="fa-brands fa-instagram"></i>
+        <a href="https://www.instagram.com/igsatyamofficial_?igsh=MTBnaXlobW5senUyZA==" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
         </a>
         <a href="https://wa.me/916205716856" target="_blank">
-                <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-brands fa-whatsapp"></i>
         </a>
     </div>
 
-
-
 </body>
-
 </html>
-
-
-
