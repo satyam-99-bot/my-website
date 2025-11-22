@@ -13,6 +13,120 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Pacifico&family=Montserrat:wght@700&display=swap"
         rel="stylesheet">
+
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: url("css/images/background.jpg") no-repeat center center/cover;
+    height: 100vh;
+    color: white;
+    background-color: #000;
+}
+
+/* NAVBAR */
+.navbar{
+    width: 100%;
+    padding: 25px 50px;
+    position: fixed;
+    top: 0;
+}
+
+.navbar ul{
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.navbar ul li a{
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.3s;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 3px;
+}
+
+.navbar ul li a:hover{
+    color: #1557e4;
+    border-bottom: 2px solid #1557e4;
+}
+
+/* HERO SECTION */
+.hero{
+    height: 100vh;
+    justify-content: center;
+    align-items: left;
+    padding-right: 300px;
+    padding-top: 40px;
+    margin-left: 50px;
+    margin-bottom: 80px;
+}
+
+.text-box{
+    text-align: right;
+}
+
+.text-box h1{
+    font-size: 65px;
+    line-height: 70px;
+}
+
+.name{
+    font-family: 'jason', sans-serif;
+    display: block;
+    font-size: 65px;
+    margin-right: 680px;
+    margin-top: 180px;
+    font-weight: 100;
+}
+
+.surname{
+    font-family: 'Verdana' sans-serif;
+    font-size: 90px;
+    display: block;
+    margin-right: 600px;
+}
+
+.tagline{
+    font-family: 'Georgia','Times New Roman';
+    font-size: 24px;
+    opacity: 0.85px;
+    margin-right: 675px;
+    font-style: oblique;
+}
+
+/* Icon container */
+.icon {
+    position: fixed;        /* Always stay fixed on screen */
+    bottom: 20px;              /* Distance from bottom */
+    left: 20px;             /* Left corner placement */
+    display: flex;
+    gap: 15px;              /* Space between icons */
+    z-index: 1000;          /* On top of everything */
+}
+
+/* Anchor styling */
+.icon a {
+    text-decoration: none;
+    font-size: 28px;        /* Icon size */
+    color: #1557e4;         /* Main theme color */
+    transition: 0.3s ease;  /* For hover animation */
+}
+
+/* Hover effect */
+.icon a:hover {
+    color: #0e3ca1;         /* Slightly darker blue on hover */
+    transform: scale(1.5);  /* Zoom effect */
+}
+
+    </style>
 </head>
 
 <body>
@@ -20,8 +134,8 @@
     <nav class="navbar">
         <ul>
             <li><a href="home.html" target="_blank">home</a></li>
-            <li><a href="resume.html" target="_blank">Resume</a></li>
-            <li><a href="about.html" target="_blank">about</a></li>
+            <li><a href="resume.html" target="_blank" >Resume</a></li>
+            <li><a href="about.html">about</a></li>
         </ul>
     </nav>
 
@@ -34,15 +148,17 @@
             <h2 class="tagline">Web Developer</h2>
         </div>
     </section>
-
+    
     <div class="icon">
+        <br>
         <a href="https://www.instagram.com/" target="_blank">
-            <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-instagram"></i>
         </a>
         <a href="https://wa.me/916205716856" target="_blank">
-            <i class="fa-brands fa-whatsapp"></i>
+                <i class="fa-brands fa-whatsapp"></i>
         </a>
     </div>
+
 
 
 </body>
